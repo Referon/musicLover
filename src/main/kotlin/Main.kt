@@ -1,7 +1,7 @@
 import kotlin.math.roundToInt
 
 fun main() {
-    val subscription = true
+    val subscription = false
     val totalAmountOfBuy = 12000f
     val buyForAmountOf = 2597f
     val discount = if (totalAmountOfBuy in 0f..1000f) {
@@ -16,7 +16,7 @@ fun main() {
     } else {
         0f
     }
-    val resultDiscount = discount - subscriptionDiscount
+    val resultDiscount = discount + subscriptionDiscount
     val roundToHundredths = ((resultDiscount * 100.0).roundToInt() / 100.0)
     val integerDiscount = roundToHundredths.toLong()
     val fractionalDiscount = ((roundToHundredths % 1) * 100).toLong()
